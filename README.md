@@ -1,7 +1,7 @@
 # vc6之Termux神器配置
 该脚本由`vc6`制作，用于Termux一键配置，无需一条条敲指令
 
-使用方法：由于github直接执行脚本经常出现443的拒绝访问错误，所以请在`网盘`中下载`install.sh`，将其手动移动到主目录`/storage/emulated/0/`下，执行 `sh /storage/emulated/0/install.sh` 即可
+## 使用方法：github直接执行脚本经常出现443的拒绝访问错误
 * 在下面网盘链接下载install.sh文件
 * [`install.sh`网盘下载地址](https://pan.baidu.com/s/1HcvRPYxKVrfPkvSmvu_bTQ)，提取码：o28m
 * 使用文件管理器将文件挪到主目录下：`/storage/emulated/0/`
