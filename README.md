@@ -1,20 +1,17 @@
 # vc6之Termux神器配置
 该脚本由`vc6`制作，用于Termux一键配置，无需一条条敲指令
 
-## 配置方法1
+## 配置方法
+为什么不用sh直接执行github脚本？因为大概率会出现403错误。
 * 在下面网盘链接下载install.sh文件
-* [`install.sh`网盘下载地址](https://pan.baidu.com/s/1HcvRPYxKVrfPkvSmvu_bTQ)，提取码：o28m
+* [install.sh 网盘下载地址](https://pan.baidu.com/s/1HcvRPYxKVrfPkvSmvu_bTQ)，提取码：o28m
 * 使用文件管理器将文件挪到主目录下：`/storage/emulated/0/`
+（如果你把文件放在其他目录里，后面的sh也要指到你放的目录里）
 * 打开Termux，执行
 `termux-setup-storage`
 * 允许权限
 * 再执行`sh /storage/emulated/0/install.sh`
 * 等待就完了，网速较慢时间较长（大约10分钟左右），建议不要同时用其他软件使用网络，尽量让Termux前台运行，`以免下载ERROR`
-
-## 使用方法2rl awy3
-* 在Termux里直接执行`sh -c "$(curl -fsSL https://github.com/vc6-1998/termux_configuration/raw/master/install.sh)"`
-
-大概率会403 Connection refused
 
 ## 脚本包括
 * 自动更换清华源
