@@ -10,9 +10,9 @@ map <F5> :call Run()<CR>
 func! Run()
 	exec "w!"
 	if &filetype == 'c'
-		exec "!clang % -o %<.exe && ./%<.exe"
+		exec "!clang % -o %< && ./%<"
 	elseif &filetype == 'cpp'
-		exec "!clang++ % -o %<.exe && ./%<.exe"
+		exec "!clang++ % -o %< && ./%<"
 	endif
 endfunc
 inoremap { {}<ESC>i
