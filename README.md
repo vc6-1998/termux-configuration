@@ -3,8 +3,8 @@
 
 ## 配置方法
 为什么不用sh直接执行github脚本？因为大概率会出现403错误。
-* 在下面网盘链接下载install.sh文件
-* [install.sh 网盘下载地址](https://pan.baidu.com/s/1WTLbRZMFQfpTl-oVmzfNJA)，提取码：832x
+* 在下面网盘链接下载`install.sh`文件
+* `install.sh` 网盘下载地址：[https://pan.baidu.com/s/1YfVblDYroeWIMiXj89FtMQ](https://pan.baidu.com/s/1YfVblDYroeWIMiXj89FtMQ)，提取码：15bn
 * 使用文件管理器将文件挪到主目录下：`/storage/emulated/0/`
 （如果你把文件放在其他目录里，后面的sh也要指到你放的目录里）
 * 打开Termux，执行
@@ -20,4 +20,4 @@
 * 自定义启动页
 * 自定义屏幕下方快捷按键
 * 配置vim编辑器（主要为C语言服务）：按F5一键保存，C/C++文件会自动保存编译运行;（方/花/尖）括号和引号自动补全等功能
-* 执行`bak`命令备份HOME目录到外部存储
+* 执行`bak`命令一键备份HOME目录到外部存储
