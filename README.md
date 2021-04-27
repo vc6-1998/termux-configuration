@@ -4,7 +4,7 @@
 ## 配置方法
 为什么不用sh直接执行github脚本？因为大概率会出现403错误。
 * 在下面网盘链接下载`install.sh`文件
-* `install.sh` 网盘下载地址：[!链接已失效](https://pan.baidu.com/s/1YfVblDYroeWIMiXj89FtMQ)，提取码：15bn
+* `install.sh` 网盘下载地址：[https://pan.baidu.com/s/1l3C45TNdyPBwg8YgBaXSSg](https://pan.baidu.com/s/1l3C45TNdyPBwg8YgBaXSSg)，提取码：a9d0
 * 使用文件管理器将文件挪到主目录下：`/storage/emulated/0/`
 （如果你把文件放在其他目录里，后面的sh也要指到你放的目录里）
 * 打开Termux，执行
