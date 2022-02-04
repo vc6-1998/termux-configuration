@@ -15,6 +15,8 @@ func! Run()
 		exec "!clang++ % -o %< && ./%<"
 	elseif &filetype == 'python'
 		exec "!python % "
+        elseif &filetype =='java'
+		exec "!ecj % && dx --dex --output=%<.dex %<.class && dalvikvm -cp %<.dex %<"
 	endif
 endfunc
 inoremap { {}<ESC>i
