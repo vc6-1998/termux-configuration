@@ -27,8 +27,10 @@ inoremap " ""<ESC>i
 inoremap ' ''<ESC>i
 imap <C-A> <ESC>ggVG
 map <C-A> <ESC>ggVG
-map <C-c> y
-map <C-X> yd
+imap <C-C> yi
+map <C-C> y
+imap <C-X> di
+map <C-X> d
 imap <C-V> <ESC>pi
 map <C-V> p
 set clipboard=unnamed	
