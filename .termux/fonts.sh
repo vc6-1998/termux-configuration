@@ -14,15 +14,17 @@ count=$(( $count - 1 ));
 
 while true; do
 #	read -p 'Enter a number, leave blank to not to change:' number;
-	number=6
+	number=6;
 	if [[ -z "$number" ]]; then
 		break;
 	elif ! [[ $number =~ ^[0-9]+$ ]]; then
+                pass;
 #		echo "Please enter the right number.";
 	elif (( $number >= 0 && $number <= $count )); then
 		cp -fr "${font_file[number]}" "$DIR/font.ttf";
 		break;
 	else
+                pass;
 #		echo "Please enter the right number.";
 	fi
 done;
