@@ -14,16 +14,18 @@ count=$(( $count - 1 ));
 
 while true; do
 #  read -p 'Enter a number, leave blank to not to change:' number;
-  number=14
+  number=14;
   if [[ -z "$number" ]]; then
     break;
   elif ! [[ $number =~ ^[0-9]+$ ]]; then
+     pass;
 #    echo "Please enter the right number!";
   elif (( $number>=0 && $number<=$count )); then
     eval choice=${colors_name[number]};
     cp -fr "$COLORS_DIR/$choice" "$DIR/colors.properties";
     break;
   else
+     pass;
 #    echo "Please enter the right number!";
   fi
 done
