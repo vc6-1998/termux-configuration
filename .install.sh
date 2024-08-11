@@ -2,6 +2,10 @@ pkg update && pkg upgrade
 pkg install vim curl wget git tree -y clang python zsh
 echo "√ 已成功安装：vim,curl,wget,git,tree,-y,clang,python,zsh"
 termux-setup-storage
+wget https://codeload.github.com/vc6-1998/termux-configuration/zip/refs/heads/master
+unzip master
+mv -f "$HOME/termux-configuration-master/*" "$HOME"
+rm -rf termux-configuration-master
 cp "$HOME/.oh-my-zsh/templates/zshrc.zsh-template" "$HOME/.zshrc"
 sed -i '/^ZSH_THEME/d' "$HOME/.zshrc"
 sed -i '1iZSH_THEME="random"' "$HOME/.zshrc"
