@@ -1,11 +1,12 @@
-pkg update && pkg upgrade 
+cd $HOME
+pkg update && pkg upgrade
 pkg install vim curl wget git tree -y clang python zsh
 echo "√ 已成功安装：vim,curl,wget,git,tree,-y,clang,python,zsh"
 termux-setup-storage
-wget https://codeload.github.com/vc6-1998/termux-configuration/zip/refs/heads/master
-unzip master
-mv -f "$HOME/termux-configuration-master/*" "$HOME"
-rm -rf termux-configuration-master
+git clone --no-checkout "https://githubfast.com/vc6-1998/termux-configuration.git" $HOME/termux-configuration
+mv $HOME/termux-configuration/.git $HOME
+rmdir $HOME/termux-configuration
+git reset --hard HEAD
 cp "$HOME/.oh-my-zsh/templates/zshrc.zsh-template" "$HOME/.zshrc"
 sed -i '/^ZSH_THEME/d' "$HOME/.zshrc"
 sed -i '1iZSH_THEME="random"' "$HOME/.zshrc"
@@ -14,11 +15,11 @@ echo "alias chcolor='$HOME/.termux/colors.sh'" >> "$HOME/.zshrc"
 echo "alias chfont='$HOME/.termux/fonts.sh'" >> "$HOME/.zshrc"
 echo "source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$HOME/.zshrc"
 chsh -s zsh
-$HOME/.termux/colors.sh
-$HOME/.termux/fonts.sh
+chmod 777 $HOME/.termux/colors.sh && $HOME/.termux/colors.sh
+chmod 777 $HOME/.termux/fonts.sh && $HOME/.termux/fonts.sh
 echo "√ 已完成字体设置"
 sed -i '102ialias bak="sh /data/data/com.termux/files/home/.backup.sh"' "$HOME/.zshrc"
-mv -R "$HOME/motd" "$PREFIX/etc/motd"
+mv "$HOME/motd" "$PREFIX/etc/motd"
 echo "√ 已完成启动页配置"
 mv "$HOME/termux.properties" "$HOME/.termux/termux.properties"
 echo "√ 已完成常用按键配置"
