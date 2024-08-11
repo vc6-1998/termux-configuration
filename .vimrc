@@ -1,4 +1,4 @@
-filetype on
+filetype o
 set nu
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
 set statusline=[%F]%y%r%m%*%=[共%L行][坐标:%l,%c,%p%%]
